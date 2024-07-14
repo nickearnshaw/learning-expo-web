@@ -5,7 +5,11 @@ import Weather from './Weather';
 export const API_KEY = '0dad96516f509d333f7ef4f79a2a3802';
 
 const WeatherContainer = () => {
-  const [state, setState] = useState({
+  const [state, setState] = useState<{
+    isLoading: boolean;
+    temperature: number;
+    error: string | null;
+  }>({
     isLoading: true,
     temperature: 0,
     error: null,
