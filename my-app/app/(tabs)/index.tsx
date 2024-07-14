@@ -1,13 +1,20 @@
 
-import { Text, View } from 'react-native';
+import Weather from '@/components/Weather';
+import WeatherContainer from '@/components/WeatherContainer';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default function Today() {
     return (
-      <View>
-        <Text>
-          Try editing me! 🎉
-        </Text>
+      <View style={styles.weather}>
+        <WeatherContainer/>
     </View>
       );
 } 
+
+const styles = StyleSheet.create({
+  weather: {
+    flex: 1,
+    width: '100%',
+  }
+});
